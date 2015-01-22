@@ -1,0 +1,17 @@
+{% extends 'base.jinja' %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Login{% endblock %}
+{% block head %}
+  {{ super() }}
+  <link rel="stylesheet" type="text/css" href="/static/css/sign.css"></link>
+{% endblock %}
+{%block content %}
+<div class="container">
+  <form class="form-signin" role="form" method="POST" action="/login/">
+    {{ wtf.quick_form(form) }}
+  </form>
+
+</div> <!-- /container -->
+
+
+{% endblock %}

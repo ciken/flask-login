@@ -1,0 +1,15 @@
+{% extends 'base.jinja' %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Register{% endblock %}
+{% block head %}
+	{{ super() }}
+	<link rel="stylesheet" type="text/css" href="/static/css/sign.css"></link>
+{% endblock %}
+{%block content %}
+
+<div class="container">
+  <form class="form-signin" role="form" action="/register/" method="POST">
+  {{ wtf.quick_form(form) }}
+  </form>
+
+{% endblock %}
